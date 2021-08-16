@@ -1,4 +1,6 @@
 import Header from "./components/Header"
+import MainWrapper from "./components/MainWrapper"
+import Owner from "./components/Owner"
 
 const App = () => {
 
@@ -8,6 +10,9 @@ const App = () => {
   return (
     <>
       <Header />
+      <MainWrapper>
+        <Owner />
+      </MainWrapper>
     </>
   );
 }
