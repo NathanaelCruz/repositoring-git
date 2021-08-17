@@ -20,6 +20,7 @@ const Owner: React.FC = () => {
         if(!data.message){
           dispatch(setOwner(data))
         }
+        //Adicionar modal de erro
       }).catch(error => alert(error))
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -35,8 +36,11 @@ const Owner: React.FC = () => {
             </S.OwnerLinkImage>
             <S.OwnerInfo role="contentinfo">
               <S.OwnerName>
-                Hi, my name is {owner.ownerRepositories.name}
+                {owner.ownerRepositories.login === 'NathanaelCruz' ? 'Olá, meu nome é ' : 'Olá, '}<strong className="featured">{owner.ownerRepositories.name}</strong>
               </S.OwnerName>
+              <S.OwnerText>
+                {owner.ownerRepositories.login === 'NathanaelCruz' ? 'Abaixo, veja meus repositórios no GitHub, mas não deixe de pesquisar outros ' : `Olha, os repositórios do ${owner.ownerRepositories.login}!`}
+              </S.OwnerText>
             </S.OwnerInfo>
           </>
         )

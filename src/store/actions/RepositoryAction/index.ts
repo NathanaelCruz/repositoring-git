@@ -24,7 +24,7 @@ export const setOwner = (owner: OwnerProps) => {
 
 export const setRepositories = (repositories: Array<RepositorieListProps>) => {
   return {
-    type: REPOSITORIES_ACTIONS.SET_OWNER_REPOSITORY,
+    type: REPOSITORIES_ACTIONS.SET_REPOSITORIES,
     payload: {
       repositoriesList: repositories
     }

@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import MainWrapper from "./components/MainWrapper"
 import Owner from "./components/Owner"
+import RepositoriesList from "./components/RepositoriesList"
 
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
       <Header />
       <MainWrapper>
         <Owner />
+        <RepositoriesList />
       </MainWrapper>
     </>
   );

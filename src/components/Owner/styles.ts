@@ -19,6 +19,11 @@ export const OwnerLinkImage = styled.a`
   border-radius: 50%;
   border: 2px solid ${props => props.theme.colors.primary};
   overflow: hidden;
+  margin-bottom: 2rem;
+
+  @media(min-width: 767px){
+    margin-bottom: 0;
+  }
 `
 
 export const OwnerImage = styled.img`
@@ -42,4 +47,17 @@ export const OwnerInfo = styled.div`
 
 export const OwnerName = styled.h2`
   font: 700 ${props => props.theme.fonts.sizes.lg} 'Spartan', 'sans-serif';
+  text-align: center;
+
+  .featured{
+    font-size: ${props => props.theme.measures(3, 'rem')};
+  }
+
+  @media(min-width: 767px){
+    text-align: left;
+  }
+`
+
+export const OwnerText = styled.h3`
+  font: 400 ${props => props.theme.fonts.sizes.md} 'Spartan', 'sans-serif';
 `
