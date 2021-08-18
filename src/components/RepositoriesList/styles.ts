@@ -9,4 +9,6 @@ export const WrapperList = styled.ul`
   max-width: 120rem;
   flex-wrap: wrap;
   list-style: none;
+  grid-gap: 2rem;
+  margin-top: ${props => props.theme.measures(2, 'rem')};
 `

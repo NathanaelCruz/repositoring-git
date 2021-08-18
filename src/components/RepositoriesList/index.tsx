@@ -29,7 +29,7 @@ const RepositoriesList: React.FC = () => {
       {
         repositoryState.repositoriesList.length > 0 && repositoryState.repositoriesList.map(repo => {
           return (
-            <Repository key={repo.id} />
+            <Repository key={repo.id} infoRepo={repo} />
           )
         })
       }
