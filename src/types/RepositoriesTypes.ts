@@ -5,13 +5,20 @@ interface OwnerRepositoriesProps{
   type: string
 }
 
+interface LicenseProps{
+  key: string,
+  name: string,
+  url: string
+}
+
 export interface RepositorieListProps{
   id?: number,
   name?: string,
   private?: boolean,
-  owner?: OwnerRepositoriesProps,
+  language?: string | null,
   html_url?: string,
-  description?: string
+  description?: string,
+  license?: null | LicenseProps
 }
 
 export interface OwnerProps {

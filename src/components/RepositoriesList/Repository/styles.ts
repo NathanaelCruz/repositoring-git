@@ -4,13 +4,19 @@ import { Flex } from "../../../assets/styles/FlexMixin";
 import { PaddingMixin } from "../../../assets/styles/PaddingMixin";
 
 export const RepositoryWrapper = styled.li`
-  ${Flex({d: 'column'})}
+  ${Flex({d: 'column', jC: 'space-between'})}
   ${BoxShadow}
   width: 100%;
   min-width: 10rem;
+  min-height: ${props => props.theme.measures(21.2, 'rem')};
   background-color: ${props => props.theme.colors.white};
   border-radius: ${props => props.theme.measures(1, 'rem')};
   overflow: hidden;
+  transition: .3s ease-in-out;
+
+  &:hover{
+    transform: scale(1.05);
+  }
 
   @media(min-width: 480px){
     width: calc(50% - 1rem);
@@ -31,6 +37,12 @@ export const RepositoryHeader = styled.header`
   width: 100%;
   margin-bottom: ${props => props.theme.measures(1, 'rem')};
   background-color: ${props => props.theme.colors.gray.light};
+  flex-wrap: wrap;
+  grid-gap: .4rem;
+
+  a{
+    text-decoration: none;
+  }
 `
 
 export const RepositoryTag = styled.span`
@@ -51,4 +63,48 @@ export const RepositoryTag = styled.span`
     color: ${props => props.theme.colors.success.font};
   }
 
+  &.license{
+    background-color: ${props => props.theme.colors.warning.bgLightColor};
+    border: 1px solid ${props => props.theme.colors.warning.bgDarkColor};
+    color: ${props => props.theme.colors.warning.font};
+  }
+
+  &.language{
+    background-color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.white};
+    transition: .3s ease-in-out;
+    
+    &:hover{
+      background-color: ${props => props.theme.colors.secondary};
+      color: ${props => props.theme.colors.primary};
+    }
+  }
+`
+
+export const RepositoryContent = styled.div`
+  ${Flex({d: 'column'})}
+  ${PaddingMixin({})}
+  width: 100%;
+`
+
+export const TitleRepository = styled.a`
+  color: ${props => props.theme.colors.primary};
+  text-decoration: none;
+  word-break: break-all;
+  font-weight: 700;
+  margin-bottom: ${props => props.theme.measures(1.2, 'rem')};
+  font-size: ${props => props.theme.fonts.sizes.lg};
+`
+
+export const RepositoryFooter = styled.footer`
+  ${Flex({jC: 'flex-start'})}
+  ${PaddingMixin({})}
+  width: 100%;
+  flex-wrap: wrap;
+
+  &.no__language{
+    ${Flex({})}
+    background-color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.white};
+  }
 `
