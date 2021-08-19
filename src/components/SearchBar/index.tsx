@@ -6,7 +6,7 @@ import * as S from './styles'
 const SearchBar: React.FC = () => {
   return (
     <S.WrapperSearch>
-      <S.SearchInput type="text" placeholder="Search repositories here" />
+      <S.SearchInput type="text" placeholder="Procure repositórios de usuários aqui" />
       <S.SearchButton type="button" aria-label="Botão para pesquisar">
         <FontAwesomeIcon icon={faSearch} size="1x" />
       </S.SearchButton>
