@@ -11,3 +11,5 @@ export const GIT_URI = {
     return `https://api.github.com/users/${owner}/repos`
   }
 }
+
+export const URL_IMAGE_RANDOM_GENERATE = 'https://unsplash.it/250/250?image='

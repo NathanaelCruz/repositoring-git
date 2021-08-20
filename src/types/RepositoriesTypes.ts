@@ -14,10 +14,12 @@ interface LicenseProps{
 export interface RepositorieListProps{
   id?: number,
   name?: string,
-  private?: boolean,
-  language?: string | null,
   html_url?: string,
   description?: string,
+  private?: boolean,
+  language?: string | null,
+  fork?: boolean,
+  updated_at?: string,
   license?: null | LicenseProps
 }
 
