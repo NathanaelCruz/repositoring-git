@@ -128,6 +128,7 @@ export const TitleRepository = styled.a`
 export const ContentImage = styled.img`
   width: ${props => props.theme.measures(5, 'rem')};
   height: ${props => props.theme.measures(5, 'rem')};
+  display: block;
   border-radius: 50%;
   border: 1px solid ${props => props.theme.colors.primary};
 `
