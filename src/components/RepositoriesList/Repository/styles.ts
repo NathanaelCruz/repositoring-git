@@ -107,14 +107,18 @@ export const RepositoryContent = styled.div`
 `
 
 export const ContentTop = styled.div`
-  ${Flex({aI: 'flex-start'})}
+  ${Flex({aI: 'flex-start', jC: 'space-between'})}
   width: 100%;
   grid-gap: 1rem;
-  margin-bottom: ${props => props.theme.measures(1.4, 'rem')};
+  margin-bottom: ${props => props.theme.measures(1.2, 'rem')};
 `
 
 export const ContentTopText = styled.div`
   ${Flex({jC: 'flex-start', d: 'column', aI: 'flex-start'})}
+
+  .repository__description{
+    font-size: ${props => props.theme.measures(1.2, 'rem')};
+  }
 `
 
 export const TitleRepository = styled.a`
@@ -123,7 +127,7 @@ export const TitleRepository = styled.a`
   word-break: break-all;
   font-weight: 700;
   margin-bottom: ${props => props.theme.measures(1, 'rem')};
-  font-size: ${props => props.theme.fonts.sizes.lg};
+  font-size: ${props => props.theme.fonts.sizes.md};
 `
 
 export const ContentImage = styled.img`
@@ -132,6 +136,19 @@ export const ContentImage = styled.img`
   height: ${props => props.theme.measures(5, 'rem')};
   border-radius: 50%;
   border: 1px solid ${props => props.theme.colors.primary};
+`
+
+export const ContentBottom = styled.div`
+  ${Flex({jC: 'flex-start'})}
+  width: 100%;
+  margin-bottom: ${props => props.theme.measures(1.2, 'rem')};
+  grid-gap: 1rem;
+`
+
+export const DateRepository = styled.time`
+  color: ${props => props.theme.colors.gray.dark};
+  font-size: ${props => props.theme.fonts.sizes.sm};
+  line-height: 1px;
 `
 
 export const RepositoryFooter = styled.footer`
