@@ -1,10 +1,3 @@
-interface OwnerRepositoriesProps{
-  login: string,
-  avatar_url: string,
-  html_url: string,
-  type: string
-}
-
 interface LicenseProps{
   key: string,
   name: string,
@@ -31,6 +24,7 @@ export interface OwnerProps {
 }
 
 export type InitialStateProps = {
+  loadingRepository: boolean,
   ownerRepositories: OwnerProps,
   repositoriesList: Array<RepositorieListProps>
 }
