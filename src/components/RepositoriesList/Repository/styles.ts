@@ -52,7 +52,6 @@ export const RepositoryTag = styled.span`
   font-size: ${props => props.theme.fonts.sizes.sm};
   background-color: transparent;
   font-weight: 700;
-  line-height: 1px;
   transition: .3s ease-in-out;
 
   &.private{
