@@ -114,7 +114,7 @@ export const ContentTop = styled.div`
 `
 
 export const ContentTopText = styled.div`
-  ${Flex({jC: 'flex-start', d: 'column'})}
+  ${Flex({jC: 'flex-start', d: 'column', aI: 'flex-start'})}
 `
 
 export const TitleRepository = styled.a`
@@ -127,9 +127,9 @@ export const TitleRepository = styled.a`
 `
 
 export const ContentImage = styled.img`
+  display: block;
   width: ${props => props.theme.measures(5, 'rem')};
   height: ${props => props.theme.measures(5, 'rem')};
-  display: block;
   border-radius: 50%;
   border: 1px solid ${props => props.theme.colors.primary};
 `
