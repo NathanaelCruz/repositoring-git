@@ -107,7 +107,7 @@ export const RepositoryContent = styled.div`
 `
 
 export const ContentTop = styled.div`
-  ${Flex({aI: 'flex-start', jC: 'space-between'})}
+  ${Flex({aI: 'flex-start', jC: 'flex-start'})}
   width: 100%;
   grid-gap: 1rem;
   margin-bottom: ${props => props.theme.measures(1.2, 'rem')};
