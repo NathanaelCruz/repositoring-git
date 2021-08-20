@@ -51,27 +51,21 @@ export const RepositoryTag = styled.span`
   border-radius: ${props => props.theme.measures(2.6, 'rem')};
   font-size: ${props => props.theme.fonts.sizes.sm};
   background-color: transparent;
-  font-weight: 500;
+  font-weight: 700;
   transition: .3s ease-in-out;
 
   &.private{
+    background-color: ${props => props.theme.colors.alert.bgLightColor};
     border: 1px solid ${props => props.theme.colors.alert.bgDarkColor};
-    color: ${props => props.theme.colors.alert.bgDarkColor};
+    color: ${props => props.theme.colors.alert.font};
 
-    &:hover{
-      background-color: ${props => props.theme.colors.alert.bgLightColor};
-      color: ${props => props.theme.colors.alert.font};
-    }
   }
 
   &.public{
+    background-color: ${props => props.theme.colors.success.bgLightColor};
     border: 1px solid ${props => props.theme.colors.success.bgDarkColor};
-    color: ${props => props.theme.colors.success.bgDarkColor};
+    color: ${props => props.theme.colors.success.font};
 
-    &:hover{
-      background-color: ${props => props.theme.colors.success.bgLightColor};
-      color: ${props => props.theme.colors.success.font};
-    }
   }
 
   &.license{
@@ -85,11 +79,11 @@ export const RepositoryTag = styled.span`
   }
 
   &.fork{
-    border: 1px solid ${props => props.theme.colors.secondary};
-    color: ${props => props.theme.colors.secondary};
+    border: 1px solid ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primary};
 
     &:hover{
-      background-color: ${props => props.theme.colors.secondary};
+      background-color: ${props => props.theme.colors.primary};
       color: ${props => props.theme.colors.font};
     }
   }
