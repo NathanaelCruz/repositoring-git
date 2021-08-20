@@ -52,6 +52,7 @@ export const RepositoryTag = styled.span`
   font-size: ${props => props.theme.fonts.sizes.sm};
   background-color: transparent;
   font-weight: 700;
+  line-height: 1px;
   transition: .3s ease-in-out;
 
   &.private{
@@ -81,10 +82,11 @@ export const RepositoryTag = styled.span`
   &.fork{
     border: 1px solid ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.primary};
+    cursor: point;
 
     &:hover{
       background-color: ${props => props.theme.colors.primary};
-      color: ${props => props.theme.colors.font};
+      color: ${props => props.theme.colors.white};
     }
   }
 
