@@ -6,6 +6,7 @@ import { StoreType } from '../../store';
 import { setLoading, setOwner } from '../../store/actions/RepositoryAction';
 import { InitialStateProps } from '../../types/RepositoriesTypes';
 import OwnerSkeleton from '../Skeletons/OwnerSkeleton';
+import swal from 'sweetalert';
 import * as S from './styles'
 
 const Owner: React.FC = () => {
@@ -16,7 +17,12 @@ const Owner: React.FC = () => {
   useEffect(() => {
     let uriGit = GIT_URI.URI_USER + 'NathanaelCruz'
     fetch(uriGit)
-      .then(res => res.json())
+      .then(res => {
+        if(!res.ok){
+          throw new Error(res.statusText)
+        }
+        return res.json()
+      })
       .then(data => {
         if(!data.message){
           dispatch(setOwner(data))
@@ -25,7 +31,18 @@ const Owner: React.FC = () => {
           }, 1000)
         }
         //Adicionar modal de erro
-      }).catch(error => alert(error))
+      }).catch(error => {
+        swal({
+          title: 'Desculpe mas houve um erro interno',
+          text: 'Por favor, tente mais tarde novamente.',
+          buttons: {
+            cancel: {
+              text: 'Tudo Bem!',
+              visible: true
+            }
+          }
+        })
+      })
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
