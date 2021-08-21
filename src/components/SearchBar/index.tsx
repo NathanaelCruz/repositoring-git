@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useDebouncedCallback } from 'use-debounce/lib';
 import { GIT_URI } from '../../constants/Repositories';
 import { useDispatch } from 'react-redux';
-import { setOwner, setRepositories } from '../../store/actions/RepositoryAction';
+import { setLoading, setOwner, setRepositories } from '../../store/actions/RepositoryAction';
 
 const SearchBar: React.FC = () => {
 
@@ -29,6 +29,9 @@ const SearchBar: React.FC = () => {
           console.log('Usuário não encontrado')
         } else {
           dispatch(setOwner(owner))
+          setTimeout(() => {
+            dispatch(setLoading(false))
+          }, 1000)
         }
       }).catch(err => console.log(err))
   }
@@ -41,12 +44,17 @@ const SearchBar: React.FC = () => {
           console.log('Repositórios para este usuário não foi encontrado')
         } else {
           dispatch(setRepositories(repos))
+          setTimeout(() => {
+            dispatch(setLoading(false))
+          }, 1000)
         }
       }).catch(err => console.log(err))
   }
 
   const setUserForRepository = () => {
     let searchUser = searchWord === '' ? 'NathanaelCruz' : searchWord
+
+    dispatch(setLoading(true))
     setOwnerOfRepository(searchUser)
     setRepositoryForOwner(searchUser)
   }

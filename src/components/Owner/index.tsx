@@ -3,8 +3,9 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { GIT_URI } from '../../constants/Repositories';
 import { StoreType } from '../../store';
-import { setOwner } from '../../store/actions/RepositoryAction';
+import { setLoading, setOwner } from '../../store/actions/RepositoryAction';
 import { InitialStateProps } from '../../types/RepositoriesTypes';
+import OwnerSkeleton from '../Skeletons/OwnerSkeleton';
 import * as S from './styles'
 
 const Owner: React.FC = () => {
@@ -19,6 +20,9 @@ const Owner: React.FC = () => {
       .then(data => {
         if(!data.message){
           dispatch(setOwner(data))
+          setTimeout(() => {
+            dispatch(setLoading(false))
+          }, 1000)
         }
         //Adicionar modal de erro
       }).catch(error => alert(error))
@@ -27,25 +31,33 @@ const Owner: React.FC = () => {
 
 
   return (
-    <S.OwnerWrapper>
-      {
-        Object.keys(owner.ownerRepositories).length > 0 && (
-          <>
-            <S.OwnerLinkImage href={owner.ownerRepositories.html_url}>
-              <S.OwnerImage src={owner.ownerRepositories.avatar_url} alt={owner.ownerRepositories.avatar_url} />
-            </S.OwnerLinkImage>
-            <S.OwnerInfo role="contentinfo">
-              <S.OwnerName>
-                {owner.ownerRepositories.login === 'NathanaelCruz' ? 'Olá, meu nome é ' : 'Olá, '}<strong className="featured">{owner.ownerRepositories.name}</strong>
-              </S.OwnerName>
-              <S.OwnerText>
-                {owner.ownerRepositories.login === 'NathanaelCruz' ? 'Abaixo, veja meus repositórios no GitHub, mas não deixe de pesquisar de outros desenvolvedores' : `Olha, os repositórios do ${owner.ownerRepositories.login}!`}
-              </S.OwnerText>
-            </S.OwnerInfo>
-          </>
-        )
-      }
-    </S.OwnerWrapper>
+    <>
+    {
+      owner.loadingRepository ? (
+        <OwnerSkeleton />
+      ) : (
+        <S.OwnerWrapper>
+          {
+            Object.keys(owner.ownerRepositories).length > 0 && (
+              <>
+                <S.OwnerLinkImage href={owner.ownerRepositories.html_url}>
+                  <S.OwnerImage src={owner.ownerRepositories.avatar_url} alt={owner.ownerRepositories.avatar_url} />
+                </S.OwnerLinkImage>
+                <S.OwnerInfo role="contentinfo">
+                  <S.OwnerName>
+                    {owner.ownerRepositories.login === 'NathanaelCruz' ? 'Olá, meu nome é ' : 'Olá, '}<strong className="featured">{owner.ownerRepositories.name}</strong>
+                  </S.OwnerName>
+                  <S.OwnerText>
+                    {owner.ownerRepositories.login === 'NathanaelCruz' ? 'Abaixo, veja meus repositórios no GitHub, mas não deixe de pesquisar de outros desenvolvedores' : `Olha, os repositórios do ${owner.ownerRepositories.login}!`}
+                  </S.OwnerText>
+                </S.OwnerInfo>
+              </>
+            )
+          }
+        </S.OwnerWrapper>
+      )
+    }
+    </>
   )
 }
 

@@ -30,3 +30,18 @@ export const setRepositories = (repositories: Array<RepositorieListProps>) => {
     }
   }
 }
+
+export const getLoading = () => {
+  return {
+    type: REPOSITORIES_ACTIONS.GET_LOADING
+  }
+}
+
+export const setLoading = (loading: boolean) => {
+  return {
+    type: REPOSITORIES_ACTIONS.SET_LOADING,
+    payload: {
+      loadingRepository: loading
+    }
+  }
+}

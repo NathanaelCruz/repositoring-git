@@ -5,15 +5,13 @@ import RepositoriesList from "./components/RepositoriesList"
 
 const App = () => {
 
-  // const owner = useSelector<StoreType, InitialStateProps>(state => state.RepositoryReducer)
-
-
   return (
     <>
       <Header />
       <MainWrapper>
         <Owner />
         <RepositoriesList />
+        
       </MainWrapper>
     </>
   );
