@@ -39,6 +39,25 @@ const GlobalStyles = createGlobalStyle`
     color: ${props => props.theme.colors.font};
   }
 
+  .swal-text{
+    text-align: justify;
+  }
+
+  .swal-button.btn__confirm,
+  .swal-button.btn__cancel{
+    font-weight: 400;
+    transition: .3s ease-in-out;
+  }
+
+  .swal-button.btn__confirm{
+    background-color: ${props => props.theme.colors.success.bgLightColor};
+    color: ${props => props.theme.colors.success.font};
+
+    &:hover{
+      background-color: ${props => props.theme.colors.success.bgDarkColor};
+    }
+  }
+
 `
 
 export default GlobalStyles

@@ -10,7 +10,7 @@ export const REPOSITORIES_ACTIONS = {
 export const GIT_URI = {
   URI_USER: 'https://api.github.com/users/',
   REPOS: (owner: string) => {
-    return `https://api.github.com/users/${owner}/repos`
+    return `https://api.github.com/users/${encodeURIComponent(owner)}/repos`
   }
 }
 
