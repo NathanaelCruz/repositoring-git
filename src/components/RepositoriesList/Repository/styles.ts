@@ -115,7 +115,8 @@ export const ContentTop = styled.div`
 
 export const ContentTopText = styled.div`
   ${Flex({jC: 'flex-start', d: 'column', aI: 'flex-start'})}
-
+  width: calc(100% - 6rem);
+  
   .repository__description{
     font-size: ${props => props.theme.measures(1.2, 'rem')};
   }
