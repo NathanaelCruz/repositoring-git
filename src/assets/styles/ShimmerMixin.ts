@@ -1,8 +1,9 @@
 import { css } from "styled-components";
 
+//#cdcdcd
 export const ShimmerBackground = css`
-  background: #f6f7f8;
-  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background: #eaeaea;
+  background-image: linear-gradient(to right, #eaeaea 0%, #c5c2c2 20%, #eaeaea 40%, #eaeaea 100%);
   background-repeat: no-repeat;
   background-size: 800px 104px; 
   display: inline-block;
