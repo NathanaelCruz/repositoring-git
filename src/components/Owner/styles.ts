@@ -42,6 +42,7 @@ export const OwnerInfo = styled.div`
 
   @media(min-width: 767px){
     margin-left: 1rem;
+    width: calc(100% - 15rem);
   }
 `
 
@@ -51,6 +52,7 @@ export const OwnerName = styled.h2`
 
   .featured{
     font-size: ${props => props.theme.measures(3, 'rem')};
+    word-break: break-word;
   }
 
   @media(min-width: 767px){
