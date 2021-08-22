@@ -45,7 +45,7 @@ Foi utilizado as seguintes tenologias para a criação do projeto Repositioning 
 
 &nbsp;  
 <h2 id="licenc-a" align="center">LICENÇA</h2>
-A licença utilizada para o projeto é a MIT, disponível em <a href="https://github.com/NathanaelCruz/repositoring-git/blob/main/LICENSE">LICENSE</a>
+A licença utilizada para o projeto é a MIT, disponível em <a href="https://github.com/NathanaelCruz/repositoring-git/blob/main/LICENSE">LICENSE</a>.
 
 &nbsp; 
 <h2 id="feature" align="center">FEATURES</h2>
@@ -67,7 +67,7 @@ Antes de utilizar, será necessário possuir o Node Package Modules (NM) instala
 &nbsp;  
 <h2 id="autor" align="center">AUTOR</h2>
 Eu sou um Front-end, formado pela UNIP em EAD Analise e Desenvolvimento de Sistemas, e curioso com as possibilidades que pode ser feitas com os framesworks e seus ecossistemas.
-Por conta disso, estudei algumas das tencologias já citadas para podermo montar este repositório unindo todas elas. Espero que goste 😊
+Por conta disso, estudei algumas das tencologias já citadas para podermo montar este repositório unindo todas elas. Espero que goste 😊!
 
 &nbsp; 
 ### &copy; Desenvolvido em 2021, por Nathanael Cruz.
