@@ -1,5 +1,6 @@
 ![Home Repositioning GIT](https://raw.githubusercontent.com/NathanaelCruz/images_resource_projects/master/Images/repositioningGit.jpg)
 
+&nbsp;  
 # REPOSITIONING GIT :octocat:
 
 O projeto pessoal Repositioning Git tem como principal funcionalidade realizar a listagem de repositórios, através do login do desenvolvedor. Essa lista de repositórios tras as informações principais dos repositórios como ultima data atualizada, nome do repositório, principal linguagem utilizada e muito mais.
