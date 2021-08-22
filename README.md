@@ -14,7 +14,7 @@ O projeto pessoal Repositioning Git tem como principal funcionalidade realizar a
 <h2 align="center"> 
 	:ok:  Repositoning Git Concluído  :ok:
 </h2>
-Disponível em [Repositioning Git](https://repositoring-git.vercel.app/)
+Disponível em <a href="https://repositoring-git.vercel.app/" target="_blank">Repositioning</a>
 
 &nbsp;  
 <p align="center">
@@ -43,7 +43,7 @@ Foi utilizado as seguintes tenologias para a criação do projeto Repositioning 
 
 &nbsp;  
 <h2 id="licenc-a" align="center">LICENÇA</h2>
-A licença utilizada para o projeto é a MIT, disponível em [LICENSE](https://github.com/NathanaelCruz/repositoring-git/blob/main/LICENSE)
+A licença utilizada para o projeto é a MIT, disponível em <a href="https://github.com/NathanaelCruz/repositoring-git/blob/main/LICENSE">LICENSE</a>
 
 &nbsp;  
 <h2 id="utilizacao" align="center">UTILIZAÇÃO</h2>
