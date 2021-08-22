@@ -66,3 +66,5 @@ Por conta disso, estudei algumas das tencologias já citadas para podermo montar
 - [x] Busca Usuários
   - [x] Valida Usuários Inexistentes
 
+&nbsp; 
+## &copy; Desenvolvido em 2021, por Nathanael Cruz.
