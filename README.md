@@ -14,7 +14,8 @@ O projeto pessoal Repositioning Git tem como principal funcionalidade realizar a
 <h2 align="center"> 
 	:ok:  Repositoning Git Concluído  :ok:
 </h2>
-Disponível em <a href="https://repositoring-git.vercel.app/" target="_blank">Repositioning</a>
+<p align="center">
+Disponível em <a href="https://repositoring-git.vercel.app/" target="_blank">Repositioning</a></p>
 
 &nbsp;  
 <p align="center">
