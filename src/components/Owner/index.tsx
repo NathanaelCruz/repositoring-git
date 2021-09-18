@@ -65,7 +65,7 @@ const Owner: React.FC = () => {
                     {owner.ownerRepositories.login === 'NathanaelCruz' ? 'Olá, meu nome é ' : 'Olá, '}<strong className="featured">{owner.ownerRepositories.name}</strong>
                   </S.OwnerName>
                   <S.OwnerText>
-                    {owner.ownerRepositories.login === 'NathanaelCruz' ? 'Abaixo, veja meus repositórios no GitHub, mas não deixe de pesquisar de outros desenvolvedores' : `Olha, os repositórios do ${owner.ownerRepositories.login}!`}
+                    {owner.ownerRepositories.login === 'NathanaelCruz' ? 'Abaixo, veja meus repositórios no GitHub, mas não deixe de pesquisar de outros desenvolvedores' : `Olha, os repositórios de ${owner.ownerRepositories.login}!`}
                   </S.OwnerText>
                 </S.OwnerInfo>
               </>
